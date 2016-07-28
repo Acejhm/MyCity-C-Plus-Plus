@@ -30,6 +30,9 @@
     <ClCompile Include="Blue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MapGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common.h">
@@ -47,12 +50,27 @@
     <ClInclude Include="Blue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MapGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Yellow Square.png">
+    <Image Include="beach sprite sheet.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Light Blue Square.png">
+    <Image Include="grass.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ocean sprite sheet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="sand convert to grass tile.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="sand.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="water.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

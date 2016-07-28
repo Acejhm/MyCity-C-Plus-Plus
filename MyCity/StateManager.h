@@ -17,4 +17,5 @@ class StateManager
 		static void startupGame();
 		static sf::Event event;
 		void startupMainMenu();
+		static void loadGame();
 };

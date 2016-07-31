@@ -1,6 +1,5 @@
 #include "Common.h"
 #include "StateManager.h"
-#include "Blue.h"
 
 void StateManager::changeState(GameState state)
 {

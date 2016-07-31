@@ -2,6 +2,6 @@
 
 Yellow::Yellow()
 {
-	texture.loadFromFile(FILE_PATH);
-	this->setTexture(texture);
+	//texture.loadFromFile(FILE_PATH);
+	//this->setTexture(texture);
 }

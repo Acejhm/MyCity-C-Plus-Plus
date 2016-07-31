@@ -5,6 +5,6 @@ class Yellow : public sf::Sprite
 public:
 	Yellow();
 private:
-	const std::string FILE_PATH = "Yellow_Square.png";
+	//const std::string FILE_PATH = "Yellow_Square.png";
 	sf::Texture texture;
 };

@@ -12,17 +12,36 @@ int main(int argc, const char* argv[])
 
 	window.create(sf::VideoMode(1024, 768, 32), "Test");
 
-	if(random >= 5)
-		window.draw(Blue());
-	else if (random < 5)
-		window.draw(Yellow());
+	//if (random >= 5)
+		//window.draw(Blue());
+	//else
+		//window.draw(Yellow());
 	window.display();
 	std::cout << "Random: " << random << "\n";
-	while(true)
+	while (true)
 	{
 		while (window.pollEvent(event))
 		{
-
+			switch (event.type)
+			{
+			case sf::Event::Closed:
+			{
+				window.close();
+				break;
+			}
+			case sf::Event::MouseButtonPressed:
+			{
+				if (event.mouseButton.button == sf::Mouse::Button::Left)
+				{
+					int mouseX = event.mouseButton.x;
+					int mouseY = event.mouseButton.y;
+				}
+			}
+			}
 		}
 	}
+	int number;
+	std::cin >> number;
+	std::cout << "Test";
+	return 0;
 }

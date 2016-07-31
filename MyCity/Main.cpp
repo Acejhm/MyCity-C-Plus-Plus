@@ -1,7 +1,6 @@
 #include "Common.h"
 #include "StateManager.h"
-#include "Blue.h"
-#include "Yellow.h"
+
 int main(int argc, const char* argv[])
 {
 	//StateManager::changeState(StateManager::GameState::startup);

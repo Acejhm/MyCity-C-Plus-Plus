@@ -1,10 +1,10 @@
 #pragma once
 #include "Common.h"
+using namespace std;
 
 class MapGenerator
 {
 	public:
-		std::vector<sf::Sprite> assignTerrain();
-		std::vector<int> generateHeightmap();
-	//private:
+		vector<vector<int>> generateHeightmap(int, int, time_t);
+		vector<vector<sf::Sprite>> assignTerrain(vector<vector<int>>);
 };

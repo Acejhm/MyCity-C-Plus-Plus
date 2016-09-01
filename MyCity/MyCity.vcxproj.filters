@@ -33,6 +33,9 @@
     <ClCompile Include="MapGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GrassTile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common.h">
@@ -44,13 +47,10 @@
     <ClInclude Include="MainMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Yellow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Blue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MapGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GrassTile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -125,6 +125,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Blue.cpp" />
+    <ClCompile Include="GrassTile.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="MapGenerator.cpp" />
@@ -132,12 +133,11 @@
     <ClCompile Include="Yellow.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Blue.h" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="GrassTile.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MapGenerator.h" />
     <ClInclude Include="StateManager.h" />
-    <ClInclude Include="Yellow.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="beach sprite sheet.png" />

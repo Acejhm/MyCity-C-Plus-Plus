@@ -24,7 +24,8 @@ void StateManager::changeState(GameState state)
 	}
 	case loading:
 	{
-
+		loadGame();
+		break;
 	}
 	case paused:
 	{
@@ -56,4 +57,8 @@ void StateManager::startupGame()
 	std::string TITLE = "My City";
 	sf::RenderWindow window(sf::VideoMode(HEIGHT, WIDTH, 32), TITLE);
 	changeState(mainMenu);
+}
+void StateManager::loadGame()
+{
+
 }

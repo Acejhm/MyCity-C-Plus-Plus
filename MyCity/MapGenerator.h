@@ -1,10 +1,11 @@
 #pragma once
 #include "Common.h"
+#include "Tile.h"
 using namespace std;
 
 class MapGenerator
 {
 	public:
 		vector<vector<int>> generateHeightmap(int, int, time_t);
-		vector<vector<sf::Sprite>> assignTerrain(vector<vector<int>>);
+		vector<vector<Tile>> assignTerrain(vector<vector<int>>);
 };

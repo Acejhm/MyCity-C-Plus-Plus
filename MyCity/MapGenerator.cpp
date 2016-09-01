@@ -1,5 +1,6 @@
 #include "MapGenerator.h"
 #include "Common.h"
+#include "Tile.h"
 using namespace std;
 
 vector<vector<int>> MapGenerator::generateHeightmap(int mapHeight, int mapWidth, time_t seed = time(NULL))
@@ -25,12 +26,20 @@ vector<vector<int>> MapGenerator::generateHeightmap(int mapHeight, int mapWidth,
 	return array2D;
 }
 
-vector<vector<sf::Sprite>> MapGenerator::assignTerrain(vector<vector<int>> heightMapArray)
+vector<vector<Tile>> MapGenerator::assignTerrain(vector<vector<int>> heightMapArray)
 {
 	int height = heightMapArray.size();
 	int width = heightMapArray[0].size();
 
-	vector<vector<sf::Sprite>> spriteArray(height);
+	static sf::Texture oceanSpriteTexture, beachSpriteTexture, grassSpriteTexture,
+		grassSandSpriteTexture, sandSpriteTexture;
+	oceanSpriteTexture.loadFromFile("ocean sprite sheet.png");
+	grassSpriteTexture.loadFromFile("grass.png");
+	sandSpriteTexture.loadFromFile("sand.png");
+	grassSandSpriteTexture.loadFromFile("sand convert to grass tile.png");
+	beachSpriteTexture.loadFromFile("beach sprite sheet.png");
+
+	vector<vector<Tile>> tileArray(height);
 
 	//Resize the width to be the right size.
 	for (int i = 0; i < width; i++)
@@ -45,9 +54,9 @@ vector<vector<sf::Sprite>> MapGenerator::assignTerrain(vector<vector<int>> heigh
 			switch (heightMapArray[h][w])
 			{
 			case 0:
-				spriteArray[h][w].setTexture(GrassTile());
+				tileArray[h][w].setTexture(oceanSpriteTexture, false);
 			}
 		}
 	}
-	return spriteArray;
+	return tileArray;
 }

@@ -4,7 +4,7 @@
 class Tile : public sf::Sprite
 {
 
-//public:
-	//static sf::Sprite;
+public:
+	static sf::Sprite sprite;
 
 };

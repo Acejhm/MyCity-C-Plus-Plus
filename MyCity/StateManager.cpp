@@ -7,15 +7,10 @@ void StateManager::changeState(GameState state)
 	{
 	case mainMenu:
 	{
-		//startupMainMenu();
-		//window.draw(Blue());
-		//window.display();
+		startupMainMenu();
+		window.draw(Blue());
+		window.display();
 		
-		
-		//while (window.pollEvent(event))
-		//{
-		//}
-		break;
 	}
 	case startup:
 	{
@@ -47,7 +42,7 @@ void StateManager::changeState(GameState state)
 }
 void StateManager::startupMainMenu()
 {
-	//changeState(loading);
+	changeState(loading);
 	
 }
 void StateManager::startupGame()
@@ -57,8 +52,4 @@ void StateManager::startupGame()
 	std::string TITLE = "My City";
 	sf::RenderWindow window(sf::VideoMode(HEIGHT, WIDTH, 32), TITLE);
 	changeState(mainMenu);
-}
-void StateManager::loadGame()
-{
-
 }

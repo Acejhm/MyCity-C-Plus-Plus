@@ -1,18 +1,19 @@
 #include "Common.h"
 #include "StateManager.h"
 
-int main(int argc, const char* argv[])
+int main()
 {
-	//StateManager::changeState(StateManager::GameState::startup);
+	std::cout << "Beginning of main" << std::endl;
+	StateManager::changeState(StateManager::GameState::startup);
 	sf::RenderWindow window;
 	sf::Event event;
 	sf::Sprite beachSprite, oceanSprite, grassSprite, sandSprite, grassSandSprite;
-	sf::Texture beachSpriteTexture, grassSpriteTexture, sandSpriteTexture, 
-				grassSandSpriteTexture, oceanSpriteTexture;
-	sf::IntRect rectangle(3,3,102,102);
+	sf::Texture beachSpriteTexture, grassSpriteTexture, sandSpriteTexture,
+		grassSandSpriteTexture, oceanSpriteTexture;
+	sf::IntRect rectangle(3, 3, 102, 102);
 	sf::Clock clock;
 	const int OFFSET = 106;
-	const int WINDOW_WIDTH = 1024;                                         
+	const int WINDOW_WIDTH = 1024;
 	const int WINDOW_HEIGHT = 768;
 	const int NUMBER_OF_SQUARES = WINDOW_WIDTH / OFFSET + WINDOW_HEIGHT / OFFSET;
 	int counter = 1;
@@ -30,22 +31,10 @@ int main(int argc, const char* argv[])
 	grassSandSprite.setTexture(grassSandSpriteTexture);
 	oceanSprite.setTexture(oceanSpriteTexture);
 	beachSprite.setTexture(beachSpriteTexture);
-	
-	srand(time(NULL));
-	
 
 	window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT, 32), "Test");
 
-	for (int i = 1; i<=WINDOW_WIDTH; i++)
-	{
-		int random = rand() % 10 + 1;
-		if (random >= 5)
-		{
-			window.draw(grassSprite);
-		}
-
-	}
-	while(true)
+	while (true)
 	{
 		while (window.pollEvent(event))
 		{

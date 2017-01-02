@@ -1,10 +1,11 @@
 #include "Common.h"
-#include "StateManager.h"
+//#include "StateManager.h"
+#include "Tile.h"
 
 int main()
 {
 	std::cout << "Beginning of main" << std::endl;
-	StateManager::changeState(StateManager::GameState::startup);
+	//StateManager::changeState(StateManager::GameState::startup);
 	sf::RenderWindow window;
 	sf::Event event;
 	sf::Sprite beachSprite, oceanSprite, grassSprite, sandSprite, grassSandSprite;
@@ -41,44 +42,16 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
+		Tile grassTile(Tile::grass, grassSpriteTexture, sf::Vector2f(100,100));
+
+		
 
 		if (clock.getElapsedTime().asMilliseconds() > 150.0f)
 		{
-			switch (counter)
-			{
-			case 1:
-			{
-				rectangle.left = 3;
-				rectangle.top = 3;
-				counter++;
-				break;
-			}
-			case 2:
-			case 3:
-			{
-				rectangle.left += OFFSET;
-				counter++;
-				break;
-			}
-			case 4:
-			{
-				rectangle.left = 3;
-				rectangle.top += OFFSET;
-				counter++;
-			}
-			case 5:
-			case 6:
-			{
-				rectangle.left += OFFSET;
-				counter = 1;
-				break;
-			}
-			}
-			beachSprite.setTextureRect(rectangle);
-			clock.restart();
+			window.clear();
+			window.draw(grassTile);
+			window.display();
 		}
-		window.clear();
-		window.draw(beachSprite);
-		window.display();
+		
 	}
 }

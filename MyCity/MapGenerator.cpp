@@ -45,7 +45,7 @@ vector<vector<sf::Sprite>> MapGenerator::assignTerrain(vector<vector<int>> heigh
 			switch (heightMapArray[h][w])
 			{
 			case 0:
-			//	spriteArray[h][w].setTexture(GrassTile());
+				break;//spriteArray[h][w].setTexture(GrassTile());
 			}
 		}
 	}
